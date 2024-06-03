@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Artham</title>
+    <style>
+      h1 {
+        text-align: center;
+        color: cornsilk;
+      }
+      body {
+        background-image: url("{% static 'cc.jpg' %}");
+        background-size: cover;
+      }
+      h2 {
+        text-align: center;
+        color: lemonchiffon;
+        margin-top: 150px;
+      }
+
+      form {
+        text-align: center;
+        margin-top: 10px;
+        size: 100px;
+        color: beige;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Artham</h1>
+    <h2>Enter Word</h2>
+    <form action="mean" method="post">
+      {% csrf_token %}<input type="text" name="word" />
+      <input type="submit" />
+    </form>
+  </body>
+</html>
